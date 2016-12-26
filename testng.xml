@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AgileAppslive Test" preserver-order="true">
+
+<parameter name="contextUrl" value="http://alok.localenv.com/networking" />
+	<parameter name="username" value="alok.sag" />
+	<parameter name="password" value="welcome" />
+	<parameter name="connstring" value="jdbc:mysql://localhost:3306/db1361349127" />
+	<parameter name="dbuser" value="root" />
+	<parameter name="dbpwd" value="" />
+  <test name="Test">
+    <classes>
+      <class name="com.softwareag.testcases.rest.SessionManagementResources"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
