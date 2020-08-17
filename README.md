@@ -13,7 +13,7 @@
 ### Shell
 
 ### Salt
-  - jinja - [jinja load and merge yml](jinja_load_and_merge_yml.jinja)
+  - jinja - [jinja load and merge yml](jinja_load_and_merge_yml.jinja)\
     usage:\
     ```yaml
     # usage.sls
