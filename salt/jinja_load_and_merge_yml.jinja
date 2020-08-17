@@ -1,0 +1,16 @@
+{% load_yaml as user_config %}
+
+deploy:
+    user_name: {{ salt['pillar.get']('user_name') }}
+    user_addrs: 'Bangalore'
+    
+{% endload %}
+
+{% load_yaml as common_config %}
+deploy:
+    item1: {{ salt['pillar.get']('item1') }}
+    item2: {{ salt['pillar.get']('item2') }}
+
+{% endload %}
+
+{%- set config = salt['slsutil.merge'](user_config.deploy, common_config.deploy,merge_lists=True) %}
