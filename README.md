@@ -28,3 +28,4 @@
     - contents: |
          item: {{ config.item1 }}
          userad: "{{ config.user_addrs }}"
+    ```
