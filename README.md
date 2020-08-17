@@ -13,3 +13,18 @@
 ### Shell
 
 ### Salt
+  - jinja - [jinja load and merge yml](jinja_load_and_merge_yml.jinja)
+    usage:\
+    ```yaml
+    # usage.sls
+    {% from "jinja_load_and_merge_yml.jinja" import config  with context  %}
+    create_values_yaml:
+    file.managed:
+    - name: /opt/user.yaml
+    - user: root
+    - group: root
+    - mode: 640
+    - makedirs: True
+    - contents: |
+         item: {{ config.item1 }}
+         userad: "{{ config.user_addrs }}"
