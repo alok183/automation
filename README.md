@@ -1,4 +1,4 @@
-# automation
+# USAGE
 aws
  - boto3 - [aws_get_memcached_filtered by VPC](aws/aws_get_memcached_with_vpc.py)\
    usage:\
