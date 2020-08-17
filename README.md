@@ -1,5 +1,5 @@
-# USAGE
-aws
+# GUIDE
+### aws
  - boto3 - [aws_get_memcached_filtered by VPC](aws/aws_get_memcached_with_vpc.py)\
    usage:\
    vpc_list = \["vpc1","vpc2","vpc3"\]\
@@ -10,6 +10,6 @@ aws
    asg_list = get_asg(vpcid)\
    /* this will write asg count in a file and can we read to set back the Minsize and Maxsize of the asg automatically. */
 
-Shell
+### Shell
 
-Salt
+### Salt
