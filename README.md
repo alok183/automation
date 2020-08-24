@@ -9,6 +9,18 @@
    usage:\
    asg_list = get_asg(vpcid)\
    /* this will write asg count in a file and can we read to set back the Minsize and Maxsize of the asg automatically. */
+   
+ - [get_volumes_status.py](aws/get_volumes_status.py)
+   
+   Description: 
+   1. Get output with Volume ID/Creation Date/Attachments/Event name/Event Date
+   2. Filter based on the requirement.
+   3. Unsed volumes can be filtered for deletion to save cost.
+   
+   USAGE:
+    1. Set the aws credentials
+    2. python get_volumes_status.py
+   
 
 ### Shell
 
