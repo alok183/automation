@@ -2,19 +2,19 @@ import boto3
 import os
 import datetime
 
-os.environ['AWS_SECRET_ACCESS_KEY']="<secret_key>"
-os.environ['REGION']="us-west-2"
-os.environ['AWS_ACCESS_KEY_ID']="<access_key>"
+session = get_session(os.getenv('REGION'),
+                      os.getenv('ACCESS_KEY_ID'),
+                      os.getenv('SECRET_KEY'))
 
 
-client = boto3.client('ec2',region_name="us-west-2")
+client = session.client('ec2',region_name="us-west-2")
 # Retrieves all regions/endpoints that work with EC2
 response = client.describe_regions()
 for reg in response['Regions']:
     print('Region:', reg['RegionName'])
     print("VOLUME_ID              | STATUS    | ATTACEMENTS   | CREATION_DATE  | EVENT                                        | EVENT_DATE")
 
-    client = boto3.client('ec2',region_name=reg['RegionName'])
+    client = session.client('ec2',region_name=reg['RegionName'])
 
     # create a list where the volume ids of unused volumes will be stored
     volumes_to_delete = list()
@@ -36,7 +36,7 @@ for reg in response['Regions']:
                 event_name=""
                 event_time=""
                 # print(each_volume['VolumeId'])
-                client = boto3.client('cloudtrail',region_name=reg['RegionName'])
+                client = session.client('cloudtrail',region_name=reg['RegionName'])
                 response = client.lookup_events(
                                 LookupAttributes=[
                                     {
