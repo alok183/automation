@@ -1,0 +1,16 @@
+# owner- alok.shrivastava(alok183)
+version: "3.7"
+
+x-common-var: &common-var
+  image: alok183/ubuntupy3:1.0
+
+services:
+  server:    
+    container_name: kapiton-server
+    <<: *common-var
+    entrypoint: bash -c "chmod +x /opt/kapitan-installation.sh && /opt/kapitan-installation.sh"
+    privileged: true
+    stdin_open: true
+    tty: true
+    volumes:
+      - "./kapitan-installation.sh:/opt/kapitan-installation.sh"
