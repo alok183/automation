@@ -53,8 +53,8 @@
 ```
 ### [kapitan](kapitan) : Generic templated configuration management for Kubernetes, Terraform etc.
 ```
-spin up the container has the kapiton installed with example checkoit from git
-command to start containet -
+spin up the container has the kapiton installed with kubernetes example checkout from git
+command to start container -
 a) go to the kapitan directory
 b) run docker-compose up -d
 ```
