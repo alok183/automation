@@ -42,3 +42,12 @@
          item: {{ config.item1 }}
          userad: "{{ config.user_addrs }}"
     ```
+### [Terraform-example](terraform-example) includes
+
+```
+1. Define versions  of the terraform and provider aws
+2. Usage of Module for different resources
+3. AWS authentication provider 
+# Terraform first will check environment variables (AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY) and if profile is defined then check in default location ~/.aws/credentials and if location is specified then in the speficied credentials file (if not found in default location)
+4. Custom tfvars file(default naming it will auto pick is terraform.tfvars) which can be passed with to the terraform command using -f option 
+```
