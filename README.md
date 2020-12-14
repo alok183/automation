@@ -51,3 +51,10 @@
 # Terraform first will check environment variables (AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY) and if profile is defined then check in default location ~/.aws/credentials and if location is specified then in the speficied credentials file (if not found in default location)
 4. Custom tfvars file(default naming it will auto pick is terraform.tfvars) which can be passed with to the terraform command using -f option 
 ```
+### [kapitan](kapitan)
+```
+spin up the container has the kapiton installed with example checkoit from git
+command to start containet -
+a) go to the kapitan directory
+b) run docker-compose up -d
+```
